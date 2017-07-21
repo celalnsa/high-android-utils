@@ -6,7 +6,7 @@ import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.widget.ImageView;
 
-import com.example.high.utilsproject.logutil.HighLog;
+import com.hehigh.hlog.HLog;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,7 +60,7 @@ public class NetworkImageDownloader {
 
         @Override
         public void onFailure(Call call, IOException e) {
-            HighLog.printLog(TAG, "Image download onFailure");
+            HLog.e(TAG, "Image download onFailure");
             e.printStackTrace();
         }
 
